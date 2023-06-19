@@ -39,9 +39,10 @@ except:
 collectionz = qdrant_client.get_collections()
 print(collectionz)
 
+# Vectors iterator
 vectors = np.load("./startup_vectors.npy")
 
-# Payload
+# Payload iterator
 fd = open("./startups_demo.json")
 payload = map(json.loads, fd)
 
