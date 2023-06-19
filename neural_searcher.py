@@ -3,6 +3,7 @@ from sentence_transformers import SentenceTransformer
 from qdrant_client.models import Filter
 from qdrant_client.http import models
 
+# https://qdrant.tech/documentation/concepts/filtering/
 
 class NeuralSearcher:
     def __init__(self, collection_name):
@@ -38,4 +39,4 @@ class NeuralSearcher:
         # `search_result` contains found vector ids with similarity scores along with the stored payload
         # In this function you are interested in payload only
         payloads = [hit.payload for hit in search_result]
-        return payloads[:2]
+        return payloads
