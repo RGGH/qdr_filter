@@ -18,7 +18,7 @@ class NeuralSearcher:
 
         city_of_interest = city
 
-        # Define a filter for cities
+        # Define a filter for city
         city_filter = Filter(
             must=[
                 models.FieldCondition(
